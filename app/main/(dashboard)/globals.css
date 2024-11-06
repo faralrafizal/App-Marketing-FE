@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: black;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* .element-with-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+} */ 
+
+/* .element-with-scrollbar::-webkit-scrollbar {
+  display: none;
+} */
+
+.bg-custom-blue {
+  background-color: rgba(93, 95, 239, 0.15);
+}
+select:focus {
+  outline: none;
+  /* atau */
+}
+.text-gray{
+  color:  #7D7D7D !important;
+}
+.text-blue{
+  color:  #3D29D0 !important;
+}
+input:focus {
+  outline:none;
+}
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 220px; /* Atur lebar sesuai kebutuhan Anda */
+}
+.fc-button-active{
+  background-color:   #5D5FEF !important;
+  color: #F5F6FB !important;
+}
+
+.fc-button-primary{
+  background-color: #F5F6FB ;}
+.switcher-animation {
+    transition: background-color 0.3s ease;
+}
+.react-calendar {
+  font-size: 16px;
+}
+
+.react-calendar__tile--active {
+  background:   #5D5FEF !important;
+  border-radius: 10%;
+
+}
+
+.react-calendar__tile--active:enabled:hover {
+  background: #5D5FEF;
+}
+
+.react-calendar__tile--active:enabled:focus {
+  background: #5D5FEF;
+}
+
+.react-calendar__tile--active:enabled:active {
+  background: #5D5FEF;
+}
+
+
+.calendar-container {
+  position: absolute;
+  top: 40px; /* Sesuaikan dengan posisi yang diinginkan */
+  right: 40px;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
